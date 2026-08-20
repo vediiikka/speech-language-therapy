@@ -1,0 +1,30 @@
+{
+    "feature_config": {
+        "n_mfcc": 20,
+        "n_fft": 2048,
+        "hop_length": 512,
+        "include_mfcc": true,
+        "include_rms": true,
+        "include_zcr": true,
+        "include_spectral_centroid": true,
+        "include_spectral_bandwidth": true,
+        "include_spectral_rolloff": true,
+        "include_chroma": true,
+        "include_pitch": true,
+        "stats": [
+            "mean",
+            "std",
+            "min",
+            "max"
+        ]
+    },
+    "feature_dim": 180,
+    "target_classes": [
+        "neutral",
+        "happy",
+        "sad",
+        "angry",
+        "anxious",
+        "distress"
+    ]
+}

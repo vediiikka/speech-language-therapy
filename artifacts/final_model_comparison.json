@@ -1,0 +1,211 @@
+{
+    "methodology_note": "Selection based on VALIDATION macro-F1 only. Test set is held-out. The LogisticRegression entry in the original model_comparison_report.json used test macro-F1 for selection \u2014 methodologically invalid, not used.",
+    "original_production_candidate": "SVM",
+    "models": {
+        "SVM": {
+            "val_accuracy": 0.4861111111111111,
+            "val_macro_f1": 0.4821734250719758,
+            "val_weighted_f1": 0.48217342507197575,
+            "test_accuracy": 0.3472222222222222,
+            "test_macro_f1": 0.3347882464011496,
+            "test_weighted_f1": 0.3347882464011496
+        },
+        "Wav2Vec2_Retrained": {
+            "training_strategy": "embedding_cache_frozen_encoder",
+            "normalization": "zero_mean_unit_variance",
+            "audio_window_s": 3.5,
+            "val_accuracy": 0.20833333333333334,
+            "val_macro_f1": 0.09835547122074635,
+            "val_weighted_f1": 0.09835547122074635,
+            "val_per_class": {
+                "neutral": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                },
+                "happy": {
+                    "precision": 0.18181818181818182,
+                    "recall": 0.3333333333333333,
+                    "f1_score": 0.23529411764705882,
+                    "support": 12
+                },
+                "sad": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                },
+                "angry": {
+                    "precision": 0.22,
+                    "recall": 0.9166666666666666,
+                    "f1_score": 0.3548387096774194,
+                    "support": 12
+                },
+                "anxious": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                },
+                "distress": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                }
+            },
+            "val_confusion_matrix": [
+                [
+                    0,
+                    0,
+                    0,
+                    12,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    4,
+                    0,
+                    8,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    5,
+                    0,
+                    7,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    1,
+                    0,
+                    11,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    7,
+                    0,
+                    5,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    5,
+                    0,
+                    7,
+                    0,
+                    0
+                ]
+            ],
+            "test_accuracy": 0.1527777777777778,
+            "test_macro_f1": 0.0625,
+            "test_weighted_f1": 0.0625,
+            "test_per_class": {
+                "neutral": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                },
+                "happy": {
+                    "precision": 0.25,
+                    "recall": 0.08333333333333333,
+                    "f1_score": 0.125,
+                    "support": 12
+                },
+                "sad": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                },
+                "angry": {
+                    "precision": 0.14705882352941177,
+                    "recall": 0.8333333333333334,
+                    "f1_score": 0.25,
+                    "support": 12
+                },
+                "anxious": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                },
+                "distress": {
+                    "precision": 0.0,
+                    "recall": 0.0,
+                    "f1_score": 0.0,
+                    "support": 12
+                }
+            },
+            "test_confusion_matrix": [
+                [
+                    0,
+                    0,
+                    0,
+                    12,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    1,
+                    0,
+                    11,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    12,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    2,
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    12,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    1,
+                    0,
+                    11,
+                    0,
+                    0
+                ]
+            ],
+            "classes_predicted_test": 2,
+            "pred_distribution_test": {
+                "angry": 68,
+                "happy": 4
+            },
+            "collapse_resolved": false
+        }
+    },
+    "production_model": "SVM",
+    "production_model_basis": "validation_macro_f1",
+    "test_used_for_model_selection": false,
+    "selection_reason": "Wav2Vec2 still collapses (2/6 classes). SVM retained."
+}

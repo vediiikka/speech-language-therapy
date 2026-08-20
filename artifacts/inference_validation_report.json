@@ -1,0 +1,125 @@
+{
+    "report_title": "End-to-End Baseline Inference Pipeline Validation Report",
+    "production_model": "SVM",
+    "artifacts_used": {
+        "model": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\artifacts\\baseline\\best_model.joblib",
+        "scaler": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\artifacts\\baseline\\scaler.joblib",
+        "label_encoder": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\artifacts\\baseline\\label_encoder.joblib"
+    },
+    "valid_inputs_test": {
+        "neutral": {
+            "status": "success",
+            "file_processed": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\data\\raw\\ravdess\\Actor_01\\03-01-01-01-01-01-01.wav",
+            "model_used": "SVC",
+            "clinical_affect_classification": "neutral",
+            "confidence_score": 0.5631,
+            "confidence_status": "Confident",
+            "class_probabilities": {
+                "angry": 0.0127,
+                "anxious": 0.0141,
+                "distress": 0.0608,
+                "happy": 0.0901,
+                "neutral": 0.5631,
+                "sad": 0.2593
+            },
+            "disclaimer": "This output is a speech emotion classification for clinical affect tracking. It is NOT a clinical diagnosis."
+        },
+        "happy": {
+            "status": "success",
+            "file_processed": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\data\\raw\\ravdess\\Actor_02\\03-01-03-01-01-01-02.wav",
+            "model_used": "SVC",
+            "clinical_affect_classification": "happy",
+            "confidence_score": 0.8272,
+            "confidence_status": "Confident",
+            "class_probabilities": {
+                "angry": 0.0423,
+                "anxious": 0.0685,
+                "distress": 0.0178,
+                "happy": 0.8272,
+                "neutral": 0.0321,
+                "sad": 0.0121
+            },
+            "disclaimer": "This output is a speech emotion classification for clinical affect tracking. It is NOT a clinical diagnosis."
+        },
+        "sad": {
+            "status": "success",
+            "file_processed": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\data\\raw\\ravdess\\Actor_03\\03-01-04-01-01-01-03.wav",
+            "model_used": "SVC",
+            "clinical_affect_classification": "sad",
+            "confidence_score": 0.6589,
+            "confidence_status": "Confident",
+            "class_probabilities": {
+                "angry": 0.0077,
+                "anxious": 0.0052,
+                "distress": 0.103,
+                "happy": 0.0301,
+                "neutral": 0.1951,
+                "sad": 0.6589
+            },
+            "disclaimer": "This output is a speech emotion classification for clinical affect tracking. It is NOT a clinical diagnosis."
+        },
+        "angry": {
+            "status": "success",
+            "file_processed": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\data\\raw\\ravdess\\Actor_04\\03-01-05-01-01-01-04.wav",
+            "model_used": "SVC",
+            "clinical_affect_classification": "angry",
+            "confidence_score": 0.8903,
+            "confidence_status": "Confident",
+            "class_probabilities": {
+                "angry": 0.8903,
+                "anxious": 0.0153,
+                "distress": 0.049,
+                "happy": 0.0263,
+                "neutral": 0.0112,
+                "sad": 0.0081
+            },
+            "disclaimer": "This output is a speech emotion classification for clinical affect tracking. It is NOT a clinical diagnosis."
+        },
+        "anxious": {
+            "status": "success",
+            "file_processed": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\data\\raw\\ravdess\\Actor_05\\03-01-06-01-01-01-05.wav",
+            "model_used": "SVC",
+            "clinical_affect_classification": "anxious",
+            "confidence_score": 0.881,
+            "confidence_status": "Confident",
+            "class_probabilities": {
+                "angry": 0.0049,
+                "anxious": 0.881,
+                "distress": 0.0335,
+                "happy": 0.0448,
+                "neutral": 0.0172,
+                "sad": 0.0186
+            },
+            "disclaimer": "This output is a speech emotion classification for clinical affect tracking. It is NOT a clinical diagnosis."
+        },
+        "distress": {
+            "status": "success",
+            "file_processed": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\data\\raw\\ravdess\\Actor_06\\03-01-07-01-01-01-06.wav",
+            "model_used": "SVC",
+            "clinical_affect_classification": "distress",
+            "confidence_score": 0.8096,
+            "confidence_status": "Confident",
+            "class_probabilities": {
+                "angry": 0.0066,
+                "anxious": 0.0095,
+                "distress": 0.8096,
+                "happy": 0.0227,
+                "neutral": 0.0809,
+                "sad": 0.0708
+            },
+            "disclaimer": "This output is a speech emotion classification for clinical affect tracking. It is NOT a clinical diagnosis."
+        }
+    },
+    "invalid_inputs_test": [
+        {
+            "input": "non_existent_file.wav",
+            "error_type": "FileNotFoundError",
+            "error_message": "Audio file not found: non_existent_file.wav"
+        },
+        {
+            "input": "C:\\Users\\Dell\\Downloads\\ml_shareable\\ml\\temp_dummy.txt",
+            "error_type": "ValueError",
+            "error_message": "Unsupported file format '.txt'. Only standard PCM .wav files are supported."
+        }
+    ]
+}

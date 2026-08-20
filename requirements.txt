@@ -1,0 +1,18 @@
+# ============================================================
+# Speech Therapy ML Module - Dependencies
+# ============================================================
+
+# Core ML & Deep Learning Frameworks
+torch>=2.0.0
+transformers>=4.30.0
+scikit-learn>=1.2.0
+numpy>=1.23.0
+joblib>=1.2.0
+
+# Audio Signal Processing & Feature Extraction
+librosa>=0.10.0
+soundfile>=0.12.1
+scipy>=1.10.0
+
+# Progress bars & utilities
+tqdm>=4.65.0

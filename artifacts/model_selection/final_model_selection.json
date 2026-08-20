@@ -1,0 +1,15 @@
+{
+    "production_candidate": "SVM",
+    "validation_macro_f1": 0.4821734250719758,
+    "validation_weighted_f1": 0.48217342507197575,
+    "validation_accuracy": 0.4861111111111111,
+    "selection_basis": "validation_macro_f1",
+    "test_used_for_model_selection": false,
+    "wav2vec2_retraining_required": true,
+    "all_candidates_validation_macro_f1": {
+        "SVM": 0.4821734250719758,
+        "RandomForest": 0.4160474964396533,
+        "LogisticRegression": 0.3565933800980751
+    },
+    "note": "Model selection is based strictly on validation set performance. The test set is held-out for final unbiased evaluation only."
+}

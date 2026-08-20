@@ -1,0 +1,9 @@
+{
+    "selected_model": "SVM",
+    "all_candidates": [
+        "LogisticRegression",
+        "SVM",
+        "RandomForest"
+    ],
+    "model_version": "1.0.0-baseline"
+}
